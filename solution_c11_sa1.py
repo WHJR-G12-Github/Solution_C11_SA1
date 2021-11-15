@@ -28,7 +28,7 @@ class Bird:
 class Pipe:
     # Creating a rectangle at [250,400] with 40,320 as width and height. Naming it as 'bpipe'
     bpipe=pygame.Rect(250,400,40,320)
-    # Defining a function 'display()' to display the pipe image over the 'bpipe' rectangle
+    # Defining a method 'display()' to display the pipe image over the 'bpipe' rectangle
     def display(self):
       screen.blit(images["pipe"],self.bpipe)
       
@@ -43,7 +43,7 @@ while True:
   screen.blit(images["ground"],[groundx,550])
   bird1.movedown()
   bird1.display()
-  # Calling the function 'display()' using the 'pipe1' object
+  # Calling the method 'display()' using the 'pipe1' object
   pipe1.display()
   for event in pygame.event.get():
     if event.type==pygame.QUIT:
